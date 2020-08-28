@@ -1,4 +1,6 @@
 'use strict'
+$(document).ready(function() {
+    
 var currentDay = moment().format("dddd, MMMM D, YYYY");
 
 console.log(currentDay);
@@ -19,4 +21,4 @@ $("#forward").on("click", function() {
     console.log(forwardDate);
     $("#currentDay").text(forwardDate);
 });
-
+});
