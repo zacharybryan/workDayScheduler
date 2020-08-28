@@ -8,9 +8,11 @@ $("#currentDay").text(now);
 $("#back").on("click", function() {
     let backDate = moment().subtract(1, 'days');
     console.log(backDate);
-    $("#currentDay").text(backDate)
+    $("#currentDay").text(backDate);
 });
 
 $("#forward").on("click", function() {
-    
+    let forwardDate = moment().add(1, 'days');
+    console.log(forwardDate);
+    $("#currentDay").text(forwardDate);
 });
