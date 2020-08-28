@@ -1,9 +1,12 @@
 'use strict'
-var now = moment().format("dddd, MMMM D, YYYY");
+var currentDay = moment().format("dddd, MMMM D, YYYY");
 
-console.log(now);
+console.log(currentDay);
 
-$("#currentDay").text(now);
+$("#currentDay").text(currentDay);
+
+// CLICK FUNCTIONS
+
 
 $("#back").on("click", function() {
     let backDate = moment().subtract(1, 'days').format("dddd, MMMM D, YYYY");
@@ -16,3 +19,4 @@ $("#forward").on("click", function() {
     console.log(forwardDate);
     $("#currentDay").text(forwardDate);
 });
+
