@@ -35,9 +35,11 @@ $(document).ready(function() {
 
     // Get current hour / change colors accordingly .past .present .future
 
-    let currentHour = moment().hour();
-    console.log(currentHour);
-
+    function getCurrentHour() {
+        let currentHour = moment().hour();
+        console.log(currentHour);
+    }
+    getCurrentHour();
 //  Display local storage to screen 
     $("#hour-9 .description").val(localStorage.getItem("hour-9"));
     $("#hour-10 .description").val(localStorage.getItem("hour-10"));
