@@ -3,7 +3,7 @@ $(document).ready(function() {
     
     const currentDay = moment().format("dddd, MMMM D, YYYY");
 
-    console.log(currentDay);
+    //console.log(currentDay);
 
     $("#currentDay").text(currentDay);
 
@@ -12,26 +12,30 @@ $(document).ready(function() {
 
     $("#back").on("click", function() {
         let backDate = moment().subtract(1, 'days').format("dddd, MMMM D, YYYY");
-        console.log(backDate);
+        //console.log(backDate);
         $("#currentDay").text(backDate);
     });
 
     $("#forward").on("click", function() {
         let forwardDate = moment().add(1, 'days').format("dddd, MMMM D, YYYY");
-        console.log(forwardDate);
+        //console.log(forwardDate);
         $("#currentDay").text(forwardDate);
     });
 
     $(".saveBtn").on("click", function() {
         let value = $(this).siblings(".description").val();
-        console.log(value);
+        //console.log(value);
 
         let time = $(this).parent().attr("id");
-        console.log(time);
+        //console.log(time);
 
+        // add item to local storage
         localStorage.setItem(time, value);
     })
 
+    // Get current hour / change colors accordingly 
+
+//  Display local storage to screen 
     $("#hour-9 .description").val(localStorage.getItem("hour-9"));
     $("#hour-10 .description").val(localStorage.getItem("hour-10"));
     $("#hour-11 .description").val(localStorage.getItem("hour-11"));
