@@ -28,5 +28,7 @@ $(document).ready(function() {
 
         let time = $(this).parent().attr("id");
         console.log(time);
+
+        localStorage.setItem(time, value);
     })
 });
