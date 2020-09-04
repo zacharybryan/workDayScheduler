@@ -25,5 +25,8 @@ $(document).ready(function() {
     $(".saveBtn").on("click", function() {
         let value = $(this).siblings(".description").val();
         console.log(value);
+
+        let time = $(this).parent().attr("id");
+        console.log(time);
     })
 });
