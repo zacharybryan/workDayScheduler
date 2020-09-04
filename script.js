@@ -31,32 +31,41 @@ $(document).ready(function() {
 
         // add item to local storage
         localStorage.setItem(time, value);
-    })
+    });
 
     // Get current hour / change colors accordingly .past .present .future
 
     function getCurrentHour() {
         let currentHour = moment().hour();
-        console.log(currentHour);
+        //console.log(currentHour);
 
-       $(".time-block").each(function(){
-           let blockHour = parseInt($(this).attr("id").split("-")[1]);
-           console.log(blockHour);
-           
-           if (blockHour < currentHour) {
+    $(".time-block").each(function(){
+        let blockHour = parseInt($(this).attr("id").split("-")[1]);
+        //console.log(blockHour);
+        
+        if (blockHour < currentHour) {
+        
             $(this).addClass("past");
-           }
+        }
 
-           else if (blockHour === currentHour) {
+        else if (blockHour === currentHour) {
+            $(this).removeClass("past");   
             $(this).addClass("present");
-           }
+        }
 
-           else {
+        else {
+            $(this).removeClass("past");
+            $(this).removeClass("present");
             $(this).addClass("future");
-           }
-       })
+        }
+    });
     }
     getCurrentHour();
+
+    const interval = setInterval(getCurrentHour, 15000)
+
+    console.log(interval);
+
 //  Display local storage to screen 
     $("#hour-9 .description").val(localStorage.getItem("hour-9"));
     $("#hour-10 .description").val(localStorage.getItem("hour-10"));
