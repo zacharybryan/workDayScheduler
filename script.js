@@ -38,6 +38,11 @@ $(document).ready(function() {
     function getCurrentHour() {
         let currentHour = moment().hour();
         console.log(currentHour);
+
+       $(".time-block").each(function(){
+           let blockHour = parseInt($(this).attr("id").split("-")[1]);
+           console.log(blockHour);
+       })
     }
     getCurrentHour();
 //  Display local storage to screen 
