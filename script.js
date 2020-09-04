@@ -42,6 +42,18 @@ $(document).ready(function() {
        $(".time-block").each(function(){
            let blockHour = parseInt($(this).attr("id").split("-")[1]);
            console.log(blockHour);
+           
+           if (blockHour < currentHour) {
+            $(this).addClass("past");
+           }
+
+           else if (blockHour === currentHour) {
+            $(this).addClass("present");
+           }
+
+           else {
+            $(this).addClass("future");
+           }
        })
     }
     getCurrentHour();
