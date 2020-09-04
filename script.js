@@ -1,7 +1,7 @@
 'use strict'
 $(document).ready(function() {
     
-    var currentDay = moment().format("dddd, MMMM D, YYYY");
+    const currentDay = moment().format("dddd, MMMM D, YYYY");
 
     console.log(currentDay);
 
@@ -11,14 +11,19 @@ $(document).ready(function() {
 
 
     $("#back").on("click", function() {
-    let backDate = moment().subtract(1, 'days').format("dddd, MMMM D, YYYY");
-    console.log(backDate);
-    $("#currentDay").text(backDate);
+        let backDate = moment().subtract(1, 'days').format("dddd, MMMM D, YYYY");
+        console.log(backDate);
+        $("#currentDay").text(backDate);
     });
 
     $("#forward").on("click", function() {
-    let forwardDate = moment().add(1, 'days').format("dddd, MMMM D, YYYY");
-    console.log(forwardDate);
-    $("#currentDay").text(forwardDate);
+        let forwardDate = moment().add(1, 'days').format("dddd, MMMM D, YYYY");
+        console.log(forwardDate);
+        $("#currentDay").text(forwardDate);
     });
+
+    $(".saveBtn").on("click", function() {
+        let value = $(this).siblings(".description").val();
+        console.log(value);
+    })
 });
