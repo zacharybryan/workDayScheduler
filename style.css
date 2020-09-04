@@ -37,7 +37,7 @@ textarea{
 }
 
 .hour {
-  background-color: #ffffff;
+  background-color: #e0e27b;
   color: #000000;
   border-top: 1px dashed #000000;
   border-left: 1px dashed #000000
@@ -49,12 +49,12 @@ textarea{
 }
 
 .present {
-  background-color: #ff6961;
+  background-color: #ff61f7;
   color: white;
 }
 
 .future {
-  background-color: #77dd77;
+  background-color: #14eff6;
   color: white;
 }
 
@@ -62,8 +62,8 @@ textarea{
   border-left: 1px solid black;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  background-color: #06AED5;
-  color: white;
+  background-color: #e0e27b;
+  color: green;
 }
 
 .saveBtn i:hover {
